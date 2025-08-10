@@ -1,80 +1,67 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "Set Up"
+description: "Set up all your files, configure your apps, and get ready"
 ---
 
-## Get started in three steps
-
-Get your documentation site running locally and make your first customization.
-
-### Step 1: Set up your local environment
-
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
+<Card title="Requirments" icon="download">
+  <Card title="Mp3Tag" icon="tag" iconType="regular" href="https://www.mp3tag.de/en/download.html">
+    Download the version that work for you.
+  </Card>
+  <Card title="Apple Music App" icon="music" href="https://music.apple.com">
     
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
+  </Card>
+</Card>
+
+## Configure Mp3Tag
+
+<Steps>
+  <Step title="Download and extract the config" stepNumber={1}>
+    [Download](https://github.com/LLRIX-ofc/docs/raw/refs/heads/main/Mp3tagSettings.zip) the configuration and then extract the zip
+  </Step>
+  <Step title="Open Mp3Tag" stepNumber={2}>
     
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+  </Step>
+  <Step title="Open configuration folder">
+    Press on `File`, then press on `Open configuration folder`
+  </Step>
+  <Step title="Copy the config">
+    Open the folder you downloaded and press `ctrl + a` then right click and press copy
+  </Step>
+  <Step title="Close Mp3Tag">
+    Make sure the app is fully closed
+  </Step>
+  <Step title="Apply the configuration">
+    Go to the `Mp3tag` folder then right click and press paste
+  </Step>
+  <Step title="Replace">
+    If you get a pop-up asking `Replace or Skip Files,` press `Replace the files in the destination`
+  </Step>
+  <Step title="Congrats">
+    Now your Mp3Tag is ready to use for apple music local files
+  </Step>
+</Steps>
 
-### Step 2: Deploy your changes
+## Get your music files ready
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+<Steps>
+  <Step title="Create a new folder">
+    Name it something that fits like "local songs" or "local music
+  </Step>
+  <Step title="Add you songs">
+    Add all of your songs into the folder
+  </Step>
+  <Step title="Convert them to m4a">
+    [Downlaod](https://github.com/LLRIX-ofc/docs/raw/refs/heads/main/app.py) the python script, place it in your music folder, and then double click to run it
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+    > This script converts all your music files to m4a which is needed for full funcitonality in apple music
+  </Step>
+  <Step title="Congrats">
+    Now your files are ready for the next step
+  </Step>
+</Steps>
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+## You are all set up\! Now you're ready for the next step
 
-### Step 3: Go live
-
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
-
-## Next steps
-
-Now that you have your docs running, explore these key features:
-
-<CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
+<Card title="Tagging" icon="stars" href="https://mintlify.com/Tagging">
+  Learn how to tag your files according to apple music standards
 </Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
-</CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>
