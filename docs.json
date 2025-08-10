@@ -8,9 +8,6 @@
         "dark": "#fa344e"
     },
     "favicon": "/favicon.svg",
-    "styles": [
-        "/css/custom.css"
-    ],
     "navigation": {
         "tabs": [
             {
