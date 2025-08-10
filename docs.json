@@ -8,6 +8,10 @@
         "dark": "#fa344e"
     },
     "favicon": "/favicon.svg",
+    "typography": {
+        "bodyFont": "https://github.com/LLRIX-ofc/mintlify-docs/raw/refs/heads/main/SF-Pro-Text-Regular.otf",
+        "headingFont": "https://github.com/LLRIX-ofc/mintlify-docs/raw/refs/heads/main/SF-Pro-Text-Bold.otf"
+    },
     "navigation": {
         "tabs": [
             {
