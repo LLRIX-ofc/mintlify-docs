@@ -7,7 +7,7 @@ description: "How to match your song to an album so the song seems legit and you
 
 Tagging your files for album matching is quite an easy task so here are the steps:
 
-## Finding properties
+### Finding properties
 
 <Steps>
   <Step title="Open apple music" stepNumber={1}>
@@ -24,7 +24,7 @@ Tagging your files for album matching is quite an easy task so here are the step
   </Step>
 </Steps>
 
-### Tagging
+### Applying Tags
 
 <Steps>
   <Step title="Open Mp3Tag">
@@ -48,7 +48,7 @@ Tagging your files for album matching is quite an easy task so here are the step
     - Disc Number
     - Total Discs
 
-    [**Tag types and how to set them up**](#tag-types)
+    [**Each tag type and how to set them up**](#tag-types)
   </Step>
   <Step title="Verify all tags">
     All the other tags should be already set by the configuration that you installed earlier, just make sure that they are all set, if not add them according to the tags list
@@ -57,7 +57,9 @@ Tagging your files for album matching is quite an easy task so here are the step
 
 ## Tag Types
 
-<ParamField query="TITLE" body="You have to find this yourself, could also be the name of the song file." type="string" required>
+Click on a tag type for instructions.
+
+<ParamField query="TITLE" type="string" required={false}>
   **Name of the song.**
 </ParamField>
 
@@ -164,6 +166,8 @@ Tagging your files for album matching is quite an easy task so here are the step
     This should be automaticaly added if you installed the config
   </Info>
 </ParamField>
+
+## How to set up each tag
 
 <Card title="Title">
   You have to find this yourself, could also be the name of the song file.
