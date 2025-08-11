@@ -59,7 +59,7 @@ Tagging your files for album matching is quite an easy task so here are the step
 
 Click on a tag type for instructions.
 
-<ParamField query="TITLE" path="#title2" type="string" required={false}>
+<ParamField query="TITLE" path="#title2" type="string" required="false">
   **Name of the song.**
 </ParamField>
 
@@ -75,8 +75,16 @@ Click on a tag type for instructions.
   **The album this song is related to.**
 </ParamField>
 
+<ParamField query="ALBUM ARTIST" type="string" required>
+  **The artist that made the album.**
+
+  <Info>
+    If multiple artists put `,` between each one.
+  </Info>
+</ParamField>
+
 <ParamField query="YEAR" type="value" required>
-  **The year the song was released in.**
+  **The year the album was released in.**
 </ParamField>
 
 <ParamField query="GENRE" type="string" required>
@@ -167,16 +175,6 @@ Click on a tag type for instructions.
   </Info>
 </ParamField>
 
-## How to set up each tag
-
-<Card title="Title">
-  You have to find this yourself, could also be the name of the song file.
-</Card>
-
-<Card title="Artist">
-  Go to the album you want to add this song to -\> click on `properties` -\> copy the text after `artist`
-</Card>
-
-<Card title="New Card">
-  
+<Card title="Instructions" icon="book" href="/instructions">
+  How to setup each tag.
 </Card>
