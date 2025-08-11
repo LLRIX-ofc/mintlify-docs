@@ -7,40 +7,172 @@ description: "How to match your song to an album so the song seems legit and you
 
 Tagging your files for album matching is quite an easy task so here are the steps:
 
-<AccordionGroup>
-  <Accordion title="Get properties" icon="sparkles">
-    <Steps>
-      <Step title="Open Mp3Tag">
-        
-      </Step>
-      <Step title="Add your files">
-        Press on `file` -\> `change directory` and select the folder you created
-      </Step>
-      <Step title="Open apple music">
-        
-      </Step>
-      <Step title="Go to the album you want to add the song to.">
-        
-      </Step>
-      <Step title="Find a good song to use.">
-        Find a song in the album that has the same artists as your song or closest possible.
-      </Step>
-      <Step title="Open properties">
-        Click the 3 dots then click `properties`
-      </Step>
-    </Steps>
-  </Accordion>
-  <Accordion title="Setting tags" icon="sparkles">
-    <Steps>
-      <Step title="Open Mp3Tag">
-        
-      </Step>
-      <Step title="Select your song">
-        Select the song you want to tag.
-      </Step>
-      <Step title="Add the custom tags">
-        The tags according to this list 
-      </Step>
-    </Steps>
-  </Accordion>
-</AccordionGroup>
+## Finding properties
+
+<Steps>
+  <Step title="Open apple music" stepNumber={1}>
+    
+  </Step>
+  <Step title="Go to the album you want to add the song to." stepNumber={2}>
+    
+  </Step>
+  <Step title="Find a good song to use." stepNumber={3}>
+    Find a song in the album that has the same artists as your song or closest possible.
+  </Step>
+  <Step title="Open properties" stepNumber={4}>
+    Click the 3 dots then click `properties` .
+  </Step>
+</Steps>
+
+### Tagging
+
+<Steps>
+  <Step title="Open Mp3Tag">
+    
+  </Step>
+  <Step title="Add your files">
+    Press on `file` -\> `change directory` and select the folder you created.
+  </Step>
+  <Step title="Select your song">
+    Select the song you want to tag.
+  </Step>
+  <Step title="Add the custom tags">
+    Now add these tags:
+
+    - Title
+    - Artist
+    - Album
+    - Album Artist
+    - Track Number
+    - Total Tracks
+    - Disc Number
+    - Total Discs
+
+    [**Tag types and how to set them up**](#Tag-Types)
+  </Step>
+  <Step title="Verify all tags">
+    All the other tags should be already set by the configuration that you installed earlier, just make sure that they are all set, if not add them according to the tags list
+  </Step>
+</Steps>
+
+## Tag Types
+
+<ParamField query="TITLE" body="You have to find this yourself, could also be the name of the song file." type="string" required>
+  **Name of the song.**
+</ParamField>
+
+<ParamField query="ARTIST" type="string" required>
+  **The artist that made the song.**
+
+  <Info>
+    If multiple artists put `,` between each one.
+  </Info>
+</ParamField>
+
+<ParamField query="ALBUM" type="string" required>
+  **The album this song is related to.**
+</ParamField>
+
+<ParamField query="YEAR" type="value" required>
+  **The year the song was released in.**
+</ParamField>
+
+<ParamField query="GENRE" type="string" required>
+  **The genre of this song.**
+</ParamField>
+
+<ParamField query="TRACK" type="value" required>
+  **The number of the song's placment in the album.**
+</ParamField>
+
+<ParamField query="TOTALTRACKS" type="value">
+  **The number of total tracks in this album.**
+</ParamField>
+
+<ParamField query="DISCNUMBER" default="1" type="value" placeholder="1">
+  **The "disc" of the album that the song is in.**
+
+  <Info>
+    Most of the time this value is 1.
+  </Info>
+</ParamField>
+
+<ParamField query="TOTALDISCS" default="1" type="value" placeholder="1">
+  **The amount of "discs" in that album.**
+
+  <Info>
+    Most of the time this value is 1.
+  </Info>
+</ParamField>
+
+<ParamField query="ITUNESADVISORY" type="boolean">
+  **If the song is explict or not.**
+
+  <Info>
+    1=yes, 0=no
+  </Info>
+</ParamField>
+
+<ParamField query="DATE ADDED" type="string">
+  **The time the album was added.**
+</ParamField>
+
+<ParamField query="DATE MODIFIED" type="string">
+  **The last time the album was edited.**
+
+  <Info>
+    Most of the time this is the same as date modified.
+  </Info>
+</ParamField>
+
+<ParamField query="COMPOSER" type="string">
+  **Usually the real name of the artist/s, producer/s, writer/s, and anyone involved in making the song.**
+</ParamField>
+
+<ParamField query="COPYRIGHT" type="string" required="false">
+  **The comapany/label that the artist dropped this song/abum under.**
+</ParamField>
+
+<ParamField query="AUDIO FORMATS" type="string" required>
+  **This has to be**`Dolby Atmos, Lossless, AAC`
+
+  <Info>
+    This should be automaticaly added if you installed the config
+  </Info>
+</ParamField>
+
+<ParamField query="CLOUD STATUS" type="string" required>
+  **This has to be** `Apple Music`
+
+  <Info>
+    This should be automaticaly added if you installed the config
+  </Info>
+</ParamField>
+
+<ParamField query="LOCATION" type="string" required>
+  **This has to be** `Cloud`
+
+  <Info>
+    This should be automaticaly added if you installed the config
+  </Info>
+</ParamField>
+
+<ParamField query="KIND" type="string" required>
+  **This has to be** `Apple Music AAC audio file`
+
+  <Info>
+    This should be automaticaly added if you installed the config
+  </Info>
+</ParamField>
+
+<Card title="Title">
+  You have to find this yourself, could also be the name of the song file.
+</Card>
+
+<Card title="Artist">
+  Go to the album you want to add this song to -\> click on `properties` -\> copy the text after `artist`
+</Card>
+
+<Card title="New Card">
+  
+</Card>

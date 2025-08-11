@@ -1,6 +1,6 @@
 ---
 title: "Tag Types"
-description: "All the valid types of tags in apple music."
+description: "All the valid tags that apple music reads."
 ---
 
 <ParamField query="TITLE" type="string" required>
@@ -70,46 +70,62 @@ description: "All the valid types of tags in apple music."
   **Usually the real name of the artist/s, producer/s, writer/s, and anyone involved in making the song.**
 </ParamField>
 
+<ParamField query="COPYRIGHT" type="string">
+  **The comapany/label that thw artist dropped this song/abum under.**
+</ParamField>
+
 <ParamField query="ITUNESADVISORY" type="string">
-  **If the song is explict or not**
+  **If the song is explict or not.**
 
   <Info>
     1=yes, 0=no
   </Info>
 </ParamField>
 
-<ParamField query="COPYRIGHT" type="string">
-  **The comapany/label that thw artist dropped this song/abum under**
-</ParamField>
+## Album matching specfic tags
 
-### Album matching specfic tags
-
-All of these can be found inside properties
+All of these can be found inside properties.
 
 <ParamField query="DATE ADDED" type="string" required>
-  **The time the album was added**
+  **The time the album was added.**
 </ParamField>
 
 <ParamField query="DATE MODIFIED" type="string">
-  **The current date**
-</ParamField>
+  **The time the album was edited.**
 
-<ParamField query="BIT RATE" type="string" required>
-  **Bit Rate**
+  <Info>
+    Most of the time this is the same as date modified.
+  </Info>
 </ParamField>
 
 <ParamField query="AUDIO FORMATS" type="string" required>
-  **Audio Formats**
+  **This has to be**`Dolby Atmos, Lossless, AAC`
+
+  <Info>
+    This should be automaticaly added if you installed the config
+  </Info>
 </ParamField>
 
 <ParamField query="CLOUD STATUS" type="string" required>
-  **Cloud Status**
+  **This has to be ** `Apple Music`
+
+  <Info>
+    This should be automaticaly added if you installed the config
+  </Info>
 </ParamField>
 
 <ParamField query="LOCATION" type="string" required>
-  **Location**
+  **This has to be **`Cloud`
+
+  <Info>
+    This should be automaticaly added if you installed the config
+  </Info>
 </ParamField>
 
 <ParamField query="KIND" type="string" required>
-  **Kind**
+  **This has to be **`Apple Music AAC audio file`
+
+  <Info>
+    This should be automaticaly added if you installed the config
+  </Info>
 </ParamField>
