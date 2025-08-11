@@ -1,0 +1,115 @@
+---
+title: "Tag Types"
+description: "All the valid types of tags in apple music."
+---
+
+<ParamField query="TITLE" type="string" required>
+  **Name of the song.**
+</ParamField>
+
+<ParamField query="ARTIST" type="string" required>
+  **The artist that made the song.**
+
+  <Info>
+    If multiple artists put `,` between each one.
+  </Info>
+</ParamField>
+
+<ParamField query="ALBUM" type="string" required>
+  **The album this song is related to.**
+
+  <Info>
+    Putting a name of a non existent album will create one with that name in your library.
+  </Info>
+  <Info>
+    If the song is a single, then do `Title - Single`
+  </Info>
+</ParamField>
+
+<ParamField query="ALBUMARTIST" type="string" required>
+  **The artist that made the album.**
+
+  <Info>
+    If multiple artists put `,` between each one
+  </Info>
+</ParamField>
+
+<ParamField query="YEAR" type="string" required>
+  **The year the song was released in.**
+</ParamField>
+
+<ParamField query="TRACK" type="string">
+  **The number of the songs placment in the album.**
+</ParamField>
+
+<ParamField query="TOTALTRACKS" type="string">
+  **The number of total tracks in this album.**
+</ParamField>
+
+<ParamField query="DISCNUMBER" default="1" type="string" placeholder="1">
+  **The "disc" of the album that the song is in.**
+
+  <Info>
+    Most of the time this value is 1.
+  </Info>
+</ParamField>
+
+<ParamField query="TOTALDISCS" default="1" type="string" placeholder="1">
+  **The amount of "discs" in that album.**
+
+  <Info>
+    Most of the time this value is 1.
+  </Info>
+</ParamField>
+
+<ParamField query="GENRE" type="string" required>
+  **The genre of this song.**
+</ParamField>
+
+<ParamField query="COMPOSER" type="string">
+  **Usually the real name of the artist/s, producer/s, writer/s, and anyone involved in making the song.**
+</ParamField>
+
+<ParamField query="ITUNESADVISORY" type="string">
+  **If the song is explict or not**
+
+  <Info>
+    1=yes, 0=no
+  </Info>
+</ParamField>
+
+<ParamField query="COPYRIGHT" type="string">
+  **The comapany/label that thw artist dropped this song/abum under**
+</ParamField>
+
+### Album matching specfic tags
+
+All of these can be found inside properties
+
+<ParamField query="DATE ADDED" type="string" required>
+  **The time the album was added**
+</ParamField>
+
+<ParamField query="DATE MODIFIED" type="string">
+  **The current date**
+</ParamField>
+
+<ParamField query="BIT RATE" type="string" required>
+  **Bit Rate**
+</ParamField>
+
+<ParamField query="AUDIO FORMATS" type="string" required>
+  **Audio Formats**
+</ParamField>
+
+<ParamField query="CLOUD STATUS" type="string" required>
+  **Cloud Status**
+</ParamField>
+
+<ParamField query="LOCATION" type="string" required>
+  **Location**
+</ParamField>
+
+<ParamField query="KIND" type="string" required>
+  **Kind**
+</ParamField>
