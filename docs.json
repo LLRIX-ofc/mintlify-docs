@@ -9,21 +9,13 @@
     },
     "favicon": "/favicon.svg",
     "navigation": {
-        "tabs": [
-            {
-                "tab": "Guides",
-                "groups": [
-                    {
-                        "group": "Getting started",
-                        "pages": [
-                            "index",
-                            "setup",
-                            "albummatching"
-                        ]
-                    }
-                ]
-            }
-        ]
+      "group": "Getting started",
+          "pages": [
+               "index",
+               "setup",
+               "albummatching",
+               "instructions"
+                   ]
     },
     "logo": {
         "light": "/logo/light.png",
