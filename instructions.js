@@ -19,3 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     link.style.cursor = "pointer";
   });
 });
+
+console.log("Custom.js is loaded!");
+
