@@ -1,22 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Select all <ParamField> elements that have the "instructions" attribute
-  const params = document.querySelectorAll('paramfield[instructions]');
+  const anchors = document.querySelectorAll('paramfield a[href^="#param-"]');
 
-  params.forEach(elem => {
-    // Change cursor to pointer to show it is clickable
-    elem.style.cursor = 'pointer';
+  anchors.forEach(anchor => {
+    const originalHref = anchor.getAttribute('href'); // e.g. "#param-TITLE"
+    if (!originalHref) return;
 
-    // Add click event listener
-    elem.addEventListener('click', () => {
-      // Get the "query" attribute value, e.g. TITLE
-      const query = elem.getAttribute('query');
-      if (!query) return;
+    // Extract the query part after "#param-"
+    const query = originalHref.replace('#param-', '').toLowerCase();
 
-      // Redirect to /instructions#query-in-lowercase
-      window.location.href = `/instructions#${query.toLowerCase()}`;
-    });
+    // Replace href to /instructions#query
+    anchor.setAttribute('href', `/instructions#${query}`);
   });
 });
+
 
 
 console.log("Custom.js is loaded!");
