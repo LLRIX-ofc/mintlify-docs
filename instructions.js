@@ -1,16 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".param-field").forEach(field => {
-    const textContent = field.innerText.toLowerCase();
+  document.querySelectorAll(".param-name a").forEach(link => {
+    // Extract the param name from href like '#param-TITLE'
+    const href = link.getAttribute("href") || "";
+    if (!href.startsWith("#param-")) return;
 
-    if (textContent.includes("instructions")) {
-      field.style.cursor = "pointer";
+    const paramName = href.replace("#param-", "");
 
-      // Extract first word as the query key (you can adjust this)
-      const queryKey = field.innerText.split("\n")[0].trim();
+    // Override click to redirect to your desired URL
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      window.location.href = `/instructions#${paramName.toLowerCase()}`;
+    });
 
-      field.addEventListener("click", () => {
-        window.location.href = `/instructions#${encodeURIComponent(queryKey)}`;
-      });
-    }
+    // Optional: update href for SEO/fallback
+    link.setAttribute("href", `/instructions#${paramName.toLowerCase()}`);
+
+    // Make sure cursor indicates it's clickable
+    link.style.cursor = "pointer";
   });
 });
