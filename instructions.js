@@ -1,19 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Select all parameter links
-    const paramLinks = document.querySelectorAll('a[href^="#param-"]');
+    // Find all divs whose id starts with param-
+    const paramDivs = document.querySelectorAll('div[id^="param-"]');
 
-    paramLinks.forEach(link => {
-        // Extract the query name from the href (#param-title -> title)
-        const queryName = link.getAttribute("href").replace("#param-", "").trim();
+    paramDivs.forEach(div => {
+        const id = div.id.replace("param-", "").trim();
 
-        // Example condition: if the query name matches one you want to redirect
-        // Here I’m assuming all params should go to /instructions#<queryName>
-        link.setAttribute("href", `/instructions#${queryName}`);
-        
-        // Ensure the click behavior navigates there
-        link.addEventListener("click", function (e) {
+        div.style.cursor = "pointer"; // make it look clickable
+
+        div.addEventListener("click", function (e) {
+            e.stopPropagation(); // prevent default behavior
             e.preventDefault();
-            window.location.href = `/instructions#${queryName}`;
+            window.location.href = `/instructions#${id}`;
         });
     });
 });
