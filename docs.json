@@ -34,7 +34,7 @@
             "website": "https://www.tiktok.com/@llrix_ofc"
         }
     },
-    "scripts": [
-        "/instructions.js"
+    "css": [
+        "/style.css"
     ]
 }
