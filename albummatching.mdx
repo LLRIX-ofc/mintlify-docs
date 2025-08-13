@@ -41,14 +41,16 @@ Tagging your files for album matching is quite an easy task so here are the step
 
 ## Tag Types
 
+
 **Click on a tag type for instructions.**
 
-<a id="goto-instructions" href="/instructions#param-title">
+<a href="/instructions#param-title">
 <ParamField query="TITLE" type="string" instructions>
 **Name of the song.**
 </ParamField>
 </a>
 
+<a href="/instructions#param-artist">
 <ParamField query="ARTIST" type="string" required>
   **The artist that made the song.**
 
@@ -56,11 +58,15 @@ Tagging your files for album matching is quite an easy task so here are the step
     If multiple artists put `,` between each one.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-album">
 <ParamField query="ALBUM" type="string" required>
   **The album this song is related to.**
 </ParamField>
+</a>
 
+<a href="/instructions#param-album-artist">
 <ParamField query="ALBUM ARTIST" type="string" required>
   **The artist that made the album.**
 
@@ -68,19 +74,27 @@ Tagging your files for album matching is quite an easy task so here are the step
     If multiple artists put `,` between each one.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-year">
 <ParamField query="YEAR" type="value" required>
   **The year the album was released in.**
 </ParamField>
+</a>
 
+<a href="/instructions#param-track">
 <ParamField query="TRACK" type="value" required>
   **The number of the song's placment in the album.**
 </ParamField>
+</a>
 
+<a href="/instructions#param-total-tracks">
 <ParamField query="TOTALTRACKS" type="value">
   **The number of total tracks in this album.**
 </ParamField>
+</a>
 
+<a href="/instructions#param-discnumber">
 <ParamField query="DISCNUMBER" default="1" type="value" placeholder="1">
   **The "disc" of the album that the song is in.**
 
@@ -88,7 +102,9 @@ Tagging your files for album matching is quite an easy task so here are the step
     Most of the time this value is 1.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-total-discs">
 <ParamField query="TOTALDISCS" default="1" type="value" placeholder="1">
   **The amount of "discs" in that album.**
 
@@ -96,19 +112,27 @@ Tagging your files for album matching is quite an easy task so here are the step
     Most of the time this value is 1.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-genre">
 <ParamField query="GENRE" type="string" required>
   **The genre of this song.**
 </ParamField>
+</a>
 
+<a href="/instructions#param-composer">
 <ParamField query="COMPOSER" type="string">
   **Usually the real name of the artist/s, producer/s, writer/s, and anyone involved in making the song.**
 </ParamField>
+</a>
 
+<a href="/instructions#param-date-modified">
 <ParamField query="DATE MODIFIED" type="string">
   **The last time the album was edited.**
 </ParamField>
+</a>
 
+<a href="/instructions#param-date-added">
 <ParamField query="DATE ADDED" type="string">
   **The time the album was added.**
 
@@ -116,19 +140,25 @@ Tagging your files for album matching is quite an easy task so here are the step
     Most of the time this is the same as date modified.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-copyright">
 <ParamField query="COPYRIGHT" type="string">
   **The comapany/label that the artist dropped this song/abum under.**
 </ParamField>
+</a>
 
-<ParamField query="COPYRIGHT" default="320" type="string">
+<a href="/instructions#param-bitrate">
+<ParamField query="BITRATE" default="320" type="string">
   **The bit rate of your song.**
 
   <Info>
     Mostly 320 kbps.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-audio-formats">
 <ParamField query="AUDIO FORMATS" type="string" required>
   **This has to be**`Dolby Atmos, Lossless, AAC`
 
@@ -136,7 +166,9 @@ Tagging your files for album matching is quite an easy task so here are the step
     This should be automaticaly added if you installed the config.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-cloud-status">
 <ParamField query="CLOUD STATUS" type="string" required>
   **This has to be** `Apple Music`
 
@@ -144,7 +176,9 @@ Tagging your files for album matching is quite an easy task so here are the step
     This should be automaticaly added if you installed the config.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-location">
 <ParamField query="LOCATION" type="string" required>
   **This has to be** `Cloud`
 
@@ -152,7 +186,9 @@ Tagging your files for album matching is quite an easy task so here are the step
     This should be automaticaly added if you installed the config.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-kind">
 <ParamField query="KIND" type="string" required>
   **This has to be** `Apple Music AAC audio file`
 
@@ -160,7 +196,9 @@ Tagging your files for album matching is quite an easy task so here are the step
     This should be automaticaly added if you installed the config.
   </Info>
 </ParamField>
+</a>
 
+<a href="/instructions#param-ITUNESADVISORY">
 <ParamField query="ITUNESADVISORY" type="boolean">
   **If the song is explict or not so apple music shows the**`E`**icon.**
 
@@ -168,6 +206,7 @@ Tagging your files for album matching is quite an easy task so here are the step
     1=yes, 0=no
   </Info>
 </ParamField>
+</a>
 
 <Card title="Instructions" icon="book" href="/instructions">
   How to setup each tag.
