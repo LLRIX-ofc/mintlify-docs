@@ -36,5 +36,8 @@
     },
     "css": [
         "/style.css"
-    ]
+    ],
+    "scripts": [
+    "/ads.js"
+  ]
 }
